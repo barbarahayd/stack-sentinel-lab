@@ -1,0 +1,22 @@
+from typing import Any, Dict, Optional, TypedDict
+
+
+class AgentState(TypedDict, total=False):
+    user_input: str
+    intent: Optional[str]
+    ticket_id: Optional[str]
+    build_id: Optional[str]
+    context: Optional[Dict[str, Any]]
+    error: Optional[str]
+    final_answer: Optional[str]
+
+
+def create_initial_state(user_input: str) -> AgentState:
+    """Contrato do Ex09: cria o state inicial do agente."""
+    raise NotImplementedError("Ex09 ainda nao implementado")
+
+
+def update_state(state: AgentState, **changes: Any) -> AgentState:
+    updated = dict(state)
+    updated.update(changes)
+    return updated  # type: ignore[return-value]

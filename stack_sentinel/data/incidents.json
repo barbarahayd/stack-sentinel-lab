@@ -1,0 +1,32 @@
+[
+  {
+    "id": "INC-9001",
+    "title": "Login indisponivel para parte dos usuarios",
+    "status": "investigating",
+    "severity": "critical",
+    "related_ticket": "TCK-101",
+    "related_build": "BLD-203",
+    "service": "auth-service",
+    "timeline": [
+      "08:45 deploy em main",
+      "08:52 build falhou em integration-tests",
+      "09:15 ticket TCK-101 aberto",
+      "09:25 healthcheck em degraded"
+    ]
+  },
+  {
+    "id": "INC-9002",
+    "title": "Resultados incompletos no catalogo",
+    "status": "monitoring",
+    "severity": "high",
+    "related_ticket": "TCK-105",
+    "related_build": "BLD-207",
+    "service": "catalog-service",
+    "timeline": [
+      "15:40 deploy em main",
+      "15:50 contract-tests falharam",
+      "16:20 ticket TCK-105 aberto"
+    ]
+  }
+]
+

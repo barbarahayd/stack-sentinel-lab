@@ -1,0 +1,81 @@
+[
+  {
+    "id": "TCK-101",
+    "title": "Erro 500 no login do portal",
+    "status": "open",
+    "severity": "high",
+    "service": "auth-service",
+    "build_id": "BLD-203",
+    "owner_team": "identity-platform",
+    "summary": "Usuarios relatam erro 500 ao tentar login no portal.",
+    "description": "Falha intermitente no endpoint /login apos deploy da branch main.",
+    "created_at": "2026-04-21T09:15:00Z",
+    "tags": ["login", "500", "auth", "customer-impact"]
+  },
+  {
+    "id": "TCK-102",
+    "title": "Latencia elevada no checkout",
+    "status": "triage",
+    "severity": "medium",
+    "service": "payment-service",
+    "build_id": "BLD-204",
+    "owner_team": "payments",
+    "summary": "Checkout acima de 2s para parte dos usuarios.",
+    "description": "Monitoramento aponta aumento de latencia em chamadas ao gateway.",
+    "created_at": "2026-04-21T10:30:00Z",
+    "tags": ["checkout", "latency", "payments"]
+  },
+  {
+    "id": "TCK-103",
+    "title": "Dashboard de BI sem atualizacao",
+    "status": "open",
+    "severity": "low",
+    "service": "analytics-service",
+    "build_id": "BLD-205",
+    "owner_team": "data-platform",
+    "summary": "Indicadores do dashboard ficaram congelados desde a madrugada.",
+    "description": "Pipeline de ingestao concluiu com alerta, mas sem atualizar agregados.",
+    "created_at": "2026-04-22T07:45:00Z",
+    "tags": ["bi", "pipeline", "analytics"]
+  },
+  {
+    "id": "TCK-104",
+    "title": "Webhook duplicando notificacoes",
+    "status": "resolved",
+    "severity": "medium",
+    "service": "notification-service",
+    "build_id": "BLD-206",
+    "owner_team": "engagement",
+    "summary": "Clientes receberam notificacoes duplicadas em eventos de pedido.",
+    "description": "Retry idempotente nao estava respeitando correlation_id.",
+    "created_at": "2026-04-19T14:10:00Z",
+    "tags": ["webhook", "idempotency", "notifications"]
+  },
+  {
+    "id": "TCK-105",
+    "title": "Busca de catalogo retorna resultados incompletos",
+    "status": "open",
+    "severity": "medium",
+    "service": "catalog-service",
+    "build_id": "BLD-207",
+    "owner_team": "commerce-core",
+    "summary": "Consultas com filtros combinados perdem itens ativos.",
+    "description": "Possivel regressao em query builder apos mudanca de indice.",
+    "created_at": "2026-04-23T16:20:00Z",
+    "tags": ["search", "catalog", "regression"]
+  },
+  {
+    "id": "TCK-106",
+    "title": "Erro de permissao ao gerar relatorio",
+    "status": "triage",
+    "severity": "low",
+    "service": "reporting-service",
+    "build_id": "BLD-208",
+    "owner_team": "backoffice",
+    "summary": "Usuarios admin recebem 403 ao exportar relatorio mensal.",
+    "description": "Escopo reports:export parece ausente em tokens emitidos ontem.",
+    "created_at": "2026-04-24T11:05:00Z",
+    "tags": ["report", "permission", "403"]
+  }
+]
+

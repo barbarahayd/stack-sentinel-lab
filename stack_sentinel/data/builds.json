@@ -1,0 +1,69 @@
+[
+  {
+    "id": "BLD-203",
+    "status": "failed",
+    "service": "auth-service",
+    "branch": "main",
+    "commit": "a81c7f2",
+    "failed_step": "integration-tests",
+    "duration_seconds": 612,
+    "started_at": "2026-04-21T08:52:00Z",
+    "log_excerpt": "test_login_with_mfa returned HTTP 500 instead of 200"
+  },
+  {
+    "id": "BLD-204",
+    "status": "passed",
+    "service": "payment-service",
+    "branch": "main",
+    "commit": "b92d0aa",
+    "failed_step": null,
+    "duration_seconds": 488,
+    "started_at": "2026-04-21T09:10:00Z",
+    "log_excerpt": "all checks passed"
+  },
+  {
+    "id": "BLD-205",
+    "status": "warning",
+    "service": "analytics-service",
+    "branch": "release/data-refresh",
+    "commit": "c03e4b1",
+    "failed_step": "data-quality-check",
+    "duration_seconds": 901,
+    "started_at": "2026-04-22T03:00:00Z",
+    "log_excerpt": "freshness check exceeded threshold for sales_daily"
+  },
+  {
+    "id": "BLD-206",
+    "status": "passed",
+    "service": "notification-service",
+    "branch": "hotfix/webhook-idempotency",
+    "commit": "d14aa60",
+    "failed_step": null,
+    "duration_seconds": 390,
+    "started_at": "2026-04-19T13:30:00Z",
+    "log_excerpt": "all checks passed"
+  },
+  {
+    "id": "BLD-207",
+    "status": "failed",
+    "service": "catalog-service",
+    "branch": "main",
+    "commit": "e25bc71",
+    "failed_step": "contract-tests",
+    "duration_seconds": 544,
+    "started_at": "2026-04-23T15:50:00Z",
+    "log_excerpt": "search response missing expected active item count"
+  },
+  {
+    "id": "BLD-208",
+    "status": "passed",
+    "service": "reporting-service",
+    "branch": "main",
+    "commit": "f36dd82",
+    "failed_step": null,
+    "duration_seconds": 433,
+    "started_at": "2026-04-24T10:45:00Z",
+    "log_excerpt": "all checks passed"
+  }
+]
+

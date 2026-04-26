@@ -1,0 +1,3 @@
+# O lab usa apenas biblioteca padrao do Python.
+# Mantenha este arquivo para compatibilidade com o comando de setup.
+

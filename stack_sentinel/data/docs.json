@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "incident-response",
+    "title": "Incident Response Guide",
+    "content": "1. Identifique impacto e servico afetado. 2. Classifique severidade. 3. Consulte build, healthcheck e tickets relacionados. 4. Escale incidentes criticos para o time dono. 5. Registre evidencias e proximo passo."
+  },
+  {
+    "slug": "severity-policy",
+    "title": "Severity Policy",
+    "content": "critical: indisponibilidade ou impacto financeiro relevante. high: falha importante com degradacao perceptivel. medium: impacto parcial com workaround. low: problema localizado sem impacto amplo."
+  },
+  {
+    "slug": "service-catalog",
+    "title": "Service Catalog",
+    "content": "auth-service: identity-platform, tier-1. payment-service: payments, tier-1. catalog-service: commerce-core, tier-1. analytics-service: data-platform, tier-2. notification-service: engagement, tier-2. reporting-service: backoffice, tier-3."
+  },
+  {
+    "slug": "build-failure-playbook",
+    "title": "Build Failure Playbook",
+    "content": "Verifique etapa falha, commit, branch, servico afetado e relacao com tickets recentes. Falhas em contract-tests sugerem regressao de contrato. Falhas em integration-tests podem indicar dependencia instavel ou mudanca funcional."
+  }
+]
+
