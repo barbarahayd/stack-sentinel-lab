@@ -1,3 +1,2 @@
-# O lab usa apenas biblioteca padrao do Python.
-# Mantenha este arquivo para compatibilidade com o comando de setup.
-
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1

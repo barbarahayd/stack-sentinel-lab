@@ -8,6 +8,7 @@ Use sempre os comandos abaixo a partir da raiz do repositorio:
 
 ```bash
 python run.py doctor
+python run.py setup
 python run.py mock-api
 python run.py test ex00
 python run.py test all
@@ -31,6 +32,37 @@ Os alunos podem implementar o corpo das funcoes indicadas nos enunciados dos exe
 - nomes das tools, resources e prompts;
 - IDs dos dados mockados usados nos testes;
 - arquivos em `tests/`, exceto se o professor pedir explicitamente.
+
+## Mock API
+
+A mock API e um servico FastAPI real. A logica e mockada, mas os endpoints HTTP existem de verdade e leem dados locais em `stack_sentinel/data/*.json`.
+
+Para subir:
+
+```bash
+python run.py setup
+python run.py mock-api
+```
+
+Depois acesse:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+Endpoints principais:
+
+- `GET /health`
+- `GET /tickets`
+- `GET /tickets/{ticket_id}`
+- `GET /builds`
+- `GET /builds/{build_id}`
+- `GET /docs`
+- `GET /docs/{slug}`
+- `GET /services`
+- `GET /services/{service_name}/health`
+- `GET /incidents`
+- `GET /incidents/{incident_id}`
 
 ## Sequencia de exercicios
 
@@ -63,4 +95,3 @@ stack_sentinel/llm/provider_client.py
 ```
 
 Essa trilha nao e necessaria para passar nos testes. Ao implementar uma LLM real, preserve o contrato de `classify_intent`: retornar apenas `ticket`, `build`, `docs` ou `unknown`.
-

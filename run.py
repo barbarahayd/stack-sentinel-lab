@@ -58,8 +58,9 @@ def doctor() -> int:
 
 
 def setup() -> int:
-    print("Nenhuma dependencia externa obrigatoria. Setup OK.")
-    return 0
+    requirements = ROOT / "requirements.txt"
+    result = subprocess.run([sys.executable, "-m", "pip", "install", "-r", str(requirements)])
+    return result.returncode
 
 
 def run_tests(target: str) -> int:
@@ -139,4 +140,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
