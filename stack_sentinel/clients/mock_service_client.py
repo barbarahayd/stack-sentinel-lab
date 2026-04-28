@@ -48,7 +48,11 @@ class MockServiceClient:
     def get_service_health(self, service_name: str) -> Dict[str, Any]:
         return self.get_json(MOCK_ENDPOINTS["service_health"].format(service_name=service_name))
 
-
 def check_mock_service_health(client: Optional[MockServiceClient] = None) -> bool:
     """Contrato do Ex01: retorna True se o health check da mock API estiver OK."""
-    raise NotImplementedError("Ex01 ainda nao implementado")
+    client = client or MockServiceClient()
+    try:
+        response = client.get_json(MOCK_ENDPOINTS["health"])
+    except Exception:
+        return False
+    return response.get("ok") is True
